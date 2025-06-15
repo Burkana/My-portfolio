@@ -1,11 +1,49 @@
 *{
-    top: 0;
-    bottom: 0;
     margin: 0;
     padding: 0;
     border: 0;
 }
- 
 body{
-    background-color: aquamarine;
+  font-family: "Clarkson",Helvetica,sans-serif;
+  font-style: normal;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+header a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.main-nav a{
+    font-size: x-large;
+}
+
+.nav-scroll{
+    align-content: center;
+}
+.nav-scroll a{
+    padding-right: 100px;
+    font-size: large;
+}
+.Welcometxt{
+    height: 1000px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+}
+footer p{
+    color: white;
 }
