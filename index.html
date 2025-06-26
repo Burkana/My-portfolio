@@ -13,24 +13,34 @@
 
     <link rel="icon" type="image/icon" href="logo.ico">
 
+    <script src="navmobile.js"></script>
+
 </head>
 
 
 <body>
-    <div class="Portfolio">
+    <div class="portfolio">
 
-        <header>
+            <header>
+            <a href="index.html"><h2>Kamen Zhelev</h2></a>
 
-            <div class="main-nav">
-                <a href="index.html"><b>Kamen Zhelev</b></a>
-            </div>
-
-            <div class="nav-scroll">
+            <nav class="nav-scroll">
                 <a href="#aboutme">About me</a>
                 <a href="#certificates">Certificates</a>
                 <a href="#footer">Socials</a>
-            </div>
+            </nav>
 
+            <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="mobile-nav" aria-hidden="true">
+                <a href="#aboutme">About me</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#footer">Socials</a>
+            </nav>
         </header>
         
         <div style="height: 100px;"></div>
@@ -92,5 +102,6 @@
             </footer>
 
     </div>
+
 </body>
 </html>

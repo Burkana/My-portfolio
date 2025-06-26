@@ -16,30 +16,21 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: white;
     flex-wrap: wrap;
     position: fixed;
     width: 100%;
     height: auto;
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;;
-  
+    padding: 10px;
+    z-index: 1000;
 }
 header a{
     text-decoration: none;
     color: black;
-}
-.main-nav{
-    align-content: center;
-}
-.main-nav a{
-    font-size: x-large;
-}
-.nav-scroll{
-    align-content: center;
-}
-.nav-scroll a{
     padding-right: 100px;
-    font-size: large;
+    font-size: larger;
 }
 
 
@@ -51,6 +42,8 @@ header a{
     justify-content: center;
     align-items: center;
     background-color: white;
+    font-size: large;
+
 }
 .welcomeform{
     height: inherit;
@@ -70,6 +63,7 @@ header a{
 }
 .aboutme p{
     padding: 2%;
+    font-size: larger;
 }
 .aboutform{
     text-align: justify;
@@ -80,23 +74,26 @@ header a{
 }
 
 
-
 .certificates{
     height: auto;
+    width: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: auto;
     align-items: center;
 }
 .certificates img{
     height: 500px;
+    max-width: 100%; 
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important; 
+    margin: 10px; 
 }
 .certificatesform{
     height: inherit;
     width: 95%;
     border-radius: 5px;
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;;
+    padding: 20px 0;
 }
 .Cimages{
     display: flex;
@@ -108,26 +105,120 @@ header a{
 footer{
     height: auto;
     width: auto;
+    margin-top: 50px;
     background-color: grey;
     display: flex;
     flex-direction: column;
     text-align: center;
     flex-wrap: wrap;
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;;
+    font-size: larger;
+
 }
 footer a{
     color: black;
     text-decoration: none;
 }
 footer img{
-    height:35px;
+    height:45px;
     width: auto;
+
 }
 .footertxt{
     margin-bottom: 5px;
     margin-left: 24px;
+    padding-bottom: 10px;
 }
 .footerlinks{
     display: flex;
     justify-content: space-evenly;
+    padding-bottom: 10px;
+    
+    
 }
+
+
+.hamburger-menu {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; 
+    margin-right: 10px; 
+    border:none; 
+    background:transparent; 
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black; 
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+
+.mobile-nav {
+    display: none; 
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -250px; 
+    width: 250px;
+    height: 100%;
+    background-color: white; 
+    padding-top: 80px; 
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+
+}
+
+.mobile-nav.active {
+    right: 0;
+    display:flex;
+}
+
+.mobile-nav a {
+    color: black; 
+    text-decoration: none;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee; 
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+@media (max-width: 768px) {
+    .nav-scroll {
+        display: none; 
+    }
+
+    .hamburger-menu {
+        display: flex; 
+    }
+
+    .certificates img {
+        height: 400px; 
+        margin: 5px; 
+    }
+
+    .Cimages {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+
+
