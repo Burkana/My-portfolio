@@ -3,15 +3,19 @@
 <head>
     <title>My Portfolio</title>
 
-    <meta charset="UTF-8">
-    
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="style.css">
+    <meta property="og:title" content="My Portfolio" />
+    <meta property="og:description" content="Game & Web Developer portfolio showcasing projects and certificates." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="burkana.github.io/My-portfolio/" />
+    <meta property="og:image" content="Icons/pdf/logo.ico" />
 
-    <link rel="icon" type="image/icon" href="logo.ico">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/icon" href="Icons/pdf/logo.ico">
 
     <script src="navmobile.js"></script>
 
@@ -21,7 +25,7 @@
 <body>
     <div class="portfolio">
 
-            <header>
+        <header>
             <a href="index.html"><h2>Kamen Zhelev</h2></a>
 
             <nav class="nav-scroll">
@@ -44,18 +48,34 @@
         </header>
         
         <div style="height: 100px;"></div>
-            <div class="welcometxt">
+        <div class="welcometxt">
 
-                <div class="welcomeform">
-                    <div>
-                        <h1>Hello I'm Kamen</h1>
-                        <h2>and this is my portfolio!</h2>
-                    </div>
+            <div class="welcomeform">
+                
+                <div>
+                    <h1>Hello I'm Kamen</h1>
+                    <h2>and this is my portfolio!</h2>
                 </div>
+           
 
-            </div>  
+                <div class="scroll-indicator">
+                    <div class="arrows left-arrows">
+                        <span>v</span>
+                        <span>v</span>
+                    </div>
+
+                    <span class="scroll-text">Scroll for more info</span>
+
+                    <div class="arrows right-arrows">
+                        <span>v</span>
+                        <span>v</span>
+                    </div>
+
+                </div>
+            </div>
+         </div> 
         
-        <div id="aboutme" style="height: 50px;"></div>
+        <div id="aboutme" style="height: 80px;"></div>
             <div class="aboutme">
 
                 <div class="aboutform">
@@ -65,11 +85,18 @@
                     I'm proficient in several programming languages including C++/C, C#, Python, Assembly, PHP, SQL, HTML, JavaScript, and CSS.
                     I’ve also worked extensively with game engines such as Unity, Unreal Engine, and Godot, which I’ve used to develop and publish multiple games.
                     Whether it's building immersive gameplay experiences or sleek, functional websites, I love bringing ideas to life through code.</p>
+              
+
+                    <div class="download-wrapper">
+                    <a href="Icons/pdf/KamenCV.pdf" download>
+                        <button class="download-cv" aria-label="Download my CV">Download my CV</button>
+                    </a>
+                    </div>
                 </div>
         
             </div>
 
-        <div id="certificates" style="height: 50px;"></div>
+        <div id="certificates" style="height: 80px;"></div>
             <div class="certificates">
             
                 <div class="certificatesform">
@@ -78,9 +105,9 @@
 
                 
                     <div class="Cimages">
-                        <img src="bcpc.jpeg">
-                        <img src="gamejam2025.jpeg">
-                        <img src="hackaton.jpeg">
+                        <img src="Icons/pdf/bcpc.jpeg" alt="bcpc certificate" loading="lazy">
+                        <img src="Icons/pdf/gamejam2025.jpeg" alt="gamejam2025 certificate" loading="lazy">
+                        <img src="Icons/pdf/hackaton.jpeg" alt="hackaton certificate" loading="lazy">
                     </div>
 
                 </div>
@@ -91,14 +118,19 @@
             <footer id="footer">
 
                 <div class="footertxt">
-                    <p>Made by Kamen</p>
+                    <p>Socials</p>
                 </div>
 
                 <div class="footerlinks">
-                    <a href="https://github.com/Burkana"><img src="github.svg"><p>My GitHub page</p></a>
-                    <a href="https://burkanaoriginal.itch.io/"><img src="itchio.svg"><p>My Itch.io game page</p></a>
-                    <a href="https://www.linkedin.com/in/kamen-zhelev-0611902bb/"><img src="linkedin.svg"><p>My LinkedIn</p></a>
-                </div>       
+                    <a href="https://github.com/Burkana"><img src="Icons/pdf/github.svg"><p>My GitHub page</p></a>
+                    <a href="https://burkanaoriginal.itch.io/"><img src="Icons/pdf/itchio.svg"><p>My Itch.io game page</p></a>
+                    <a href="https://www.linkedin.com/in/kamen-zhelev-0611902bb/"><img src="Icons/pdf/linkedin.svg"><p>My LinkedIn</p></a>
+                </div>  
+                
+                <div class="footertxt">
+                    <p>Made by Kamen Zhelev</p>
+                </div>
+
             </footer>
 
     </div>
