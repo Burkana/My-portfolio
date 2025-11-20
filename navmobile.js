@@ -1,36 +1,31 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger-menu');
     const mobileNav = document.querySelector('.mobile-nav');
 
-    if (!hamburger || !mobileNav) return;         
 
-    hamburger.addEventListener('click', e => {
-        e.stopPropagation();
-        const isOpen = hamburger.classList.toggle('active');
-        mobileNav.classList.toggle('active', isOpen);
+    hamburger.addEventListener('click', function() {
+    
+        this.classList.toggle('active'); 
+      
+        mobileNav.classList.toggle('active');
 
-
-        hamburger.setAttribute('aria-expanded', isOpen);
-        mobileNav.setAttribute('aria-hidden', !isOpen);
+       
+        const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+        this.setAttribute('aria-expanded', !isExpanded);
+        
+        mobileNav.setAttribute('aria-hidden', isExpanded);
     });
 
 
-    mobileNav.querySelectorAll('a').forEach(link =>
-        link.addEventListener('click', () => {
+    const mobileNavLinks = mobileNav.querySelectorAll('a');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
             hamburger.classList.remove('active');
             mobileNav.classList.remove('active');
+            
+            
             hamburger.setAttribute('aria-expanded', 'false');
             mobileNav.setAttribute('aria-hidden', 'true');
-        })
-    );
-
-    document.addEventListener('click', e => {
-        if (
-            !mobileNav.contains(e.target) &&
-            !hamburger.contains(e.target) &&
-            mobileNav.classList.contains('active')
-        ) {
-            hamburger.click();     
-        }
+        });
     });
 });
